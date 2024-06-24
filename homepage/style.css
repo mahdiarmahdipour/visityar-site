@@ -1,35 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
-body{
+
+body {
     background-color: rgb(228, 228, 228);
     direction: rtl;
     text-align: right;
-    font-family: vazirmatn;
-
+    font-family: 'Vazirmatn', sans-serif;
 }
+
 .navbar-nav {
     margin: 2;
-    
 }
+
 .navbar-brand img {
     margin: 0 20px;
     height: 40px;
- 
-
 }
-.navbar{
+
+.navbar {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
+
 .btn-user {
     background-color: #2CDBB2;
-    color: rgb(0, 0, 0);
+    color: #000;
     border: none;
     margin: auto;
     border-radius: 10px;
 }
+
 .btn-doctor {
     background-color: transparent;
     color: #000000;
     border: 2px solid #2CDBB2;
     border-radius: 10px;
 }
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #2CDBB2;
+}
+
+.btn-confirm {
+    background-color: #2CDBB2;
+    color: rgb(0, 0, 0);
+}
+.input-group{
+    direction: ltr;
+}
+.modal-content {
+    text-align: center;
+    }
+    
