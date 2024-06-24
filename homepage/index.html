@@ -73,12 +73,34 @@
                 </div>
                 <div class="modal-footer justify-content-center">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ثبت نام</button>
-                    <button id="sendCodeBtn" type="button" class="btn btn-confirm" data-bs-target="#checkCodeModal">ارسال کد تایید</button>
+                    <button id="sendCodeBtn" type="button" class="btn btn-confirm" data-bs-toggle="modal" data-bs-target="#checkCodeModal">ارسال کد تایید</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- /User Login Modal -->
+
+    <!-- Verification Code Modal -->
+    <div class="modal fade" id="checkCodeModal" tabindex="-1" aria-labelledby="checkCodeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkCodeModalLabel">کد تایید را وارد کنید</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>لطفاً کد تایید را وارد کنید:</p>
+                    <input type="text" id="verificationCodeInput" class="form-control mb-3" placeholder="مثال: 123456">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+                    <button id="submitCodeBtn" type="button" class="btn btn-primary">تایید</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Verification Code Modal -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
