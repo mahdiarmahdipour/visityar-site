@@ -5,11 +5,12 @@ body {
     direction: rtl;
     text-align: right;
     font-family: 'Vazirmatn', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    
 }
 
-.navbar-nav {
-    margin: 2;
-}
 
 .navbar-brand img {
     margin: 0 20px;
@@ -38,6 +39,8 @@ body {
 
 .modal-header, .modal-footer {
     border: none;
+    display: flex;
+    justify-content: space-around;
 }
 
 .form-control:focus {
@@ -55,4 +58,53 @@ body {
 .modal-content {
     text-align: center;
     }
+.custom-input {
+    background-color: white;
+    border: none;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 10px 20px;
+    width: 80%;
+    max-width: 60%;
+  }
+  .custom-button {
+    background-color: #2a9d8f;
+    border: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 10px 30px;
+    color: rgb(0, 0, 0);
+    display: inline-flex;
+    align-items: center;
+  }
+  .custom-button i {
+    margin-left: 5px;
+  }
+  .stats {
+    margin-top: 30px;
+  }
+  .stats div {
+    margin: 15px 0;
+  }
+  .bg-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
+    background-image: url('icons-bg.png'); /* پس زمینه دلخواه */
+    background-repeat: repeat;
+  }
+  .searchbar {
+    background-color: #2CDBB2;
+    color: white;
+    padding: 60px 0 20px;
+    position: relative;
+    top: -56px; /* Adjust this value according to your navbar height */
+    z-index: -1;}
+
+.container {
+        max-width: 100%;
+        color: #000;
     
+    }
