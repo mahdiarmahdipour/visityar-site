@@ -299,5 +299,67 @@ body {
 .btn-primary:hover {
   background-color: #00b35f; 
 }
+/*  */
+.card-nazar {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  margin: 5px;
+  max-width: 400px;
+}
+.card-nazar .card-img-top {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+.card-nazar .stars {
+  color: #FFD700;
+  margin: 10px 0;
+}
+.card-nazar p {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+.card-nazar .name {
+  font-weight: bold;
+  margin-top: 20px;
+}
+.card-nazar .date {
+  color: #777;
+  font-size: 0.9em;
+}
+ .footer {
+        background-color: #aaaaaa;
+        padding : 30px 0;
+        font-size: 14px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
 
-  
+        
+
+    }
+    
+    .footer .footer-logo {
+        font-size: 50px;
+        font-weight: bold;
+        color: #2CDBB2;
+        margin-right: 10%;
+    }
+    
+    .footer .section-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .footer .divider {
+        border-top: 1px solid #ddd;
+        margin: 20px 0;
+    }
+    
+    .footer .icons img {
+        max-width: 70px;
+        margin: 0 10px;
+    }

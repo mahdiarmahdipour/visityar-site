@@ -17,3 +17,17 @@ document.getElementById('submitCodeBtn').addEventListener('click', function () {
     var modalInstance = bootstrap.Modal.getInstance(modalElement);
     modalInstance.hide();
 });
+function toggleReviewSection() {
+    var section = document.getElementById('reviewSection');
+    if (section.style.display === 'none' || section.style.display === '') {
+        section.style.display = 'block';
+    } else {
+        section.style.display = 'none';
+    }
+}
+
+function submitReview() {
+    // Logic for submitting the review
+    alert('نظر شما ثبت شد.');
+    toggleReviewSection();
+}
