@@ -1,13 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nobat</title>
-    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="nobatstyle.css">
+    <title>لیست پزشکان</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500&display=swap" rel="stylesheet">
+    <link href="nobatstyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+
 </head>
 <body>
-    
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="homepage\image\logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">نوبت دهی</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            مشاوره پزشکی
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">مشاوره تلفنی</a>
+                            <a class="dropdown-item" href="#">مشاوره متنی</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">مراکز درمانی</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            سایر خدمات
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">ویزیت یار پلاس (به زودی)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">مجله سلامت</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">درباره ما</a>
+                    </li>
+                </ul>
+                <button class="btn btn-user" data-bs-toggle="modal" data-bs-target="#userLoginModal">ورود کاربران</button>
+                <button class="btn btn-doctor">ورود پزشکان</button>
+            </div>
+        </div>
+    </nav>
+    <!-- /navbar -->
+
+    <!-- User Login Modal -->
+    <div class="modal fade" id="userLoginModal" tabindex="-1" aria-labelledby="userLoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="modal-title" id="userLoginModalLabel">ورود به ویزیت یار</h3>
+                    <p>برای دسترسی به تمامی امکانات وارد شوید!</p>
+                    <div class="mb-3 input-group">
+                        <span class="input-group-text">+98</span>
+                        <input id="phoneNumberInput" type="text" class="form-control" placeholder="مثال: 09123456789">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ثبت نام</button>
+                    <button id="sendCodeBtn" type="button" class="btn btn-confirm" data-bs-toggle="modal" data-bs-target="#checkCodeModal">ارسال کد تایید</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /User Login Modal -->
+
+    <!-- Verification Code Modal -->
+    <div class="modal fade" id="checkCodeModal" tabindex="-1" aria-labelledby="checkCodeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkCodeModalLabel">کد تایید را وارد کنید</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>لطفاً کد تایید را وارد کنید:</p>
+                    <input type="text" id="verificationCodeInput" class="form-control mb-3" placeholder="مثال: 123456">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+                    <button id="submitCodeBtn" type="button" class="btn btn-primary">تایید</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Verification Code Modal -->
+
+
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Filter Section -->
+            <div class="col-md-3 mb-3">
+                <div class="filter-section">
+                    <h5><i class='bx bx-filter' style='margin-left: 5px; font-size: 1.2em'></i>فیلترها</h5>
+                                       <div class="form-group mt-3">
+                        <label for="specialization">تخصص و فوق تخصص</label>
+                        <select class="form-control" id="specialization" style="font-size: 0.8rem;">
+                            <option> <h6>تخصص مورد نظر را انتخاب کنید</h6></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">خدمات</label>
+                        <select class="form-control" id="service" style="font-size: 0.8rem;">
+                            <option>خدمت مورد نظر را انتخاب کنید</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">شهر</label>
+                        <select class="form-control" id="city" style="font-size: 0.8rem;">
+                            <option>شهر</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="area">محله</label>
+                        <select class="form-control" id="area" style="font-size: 0.8rem;">
+                            <option>محله</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="insurance">بیمه</label>
+                        <select class="form-control" id="insurance" style="font-size: 0.8rem;">
+                            <option>بیمه مورد نظر را انتخاب کنید</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>جنسیت پزشک</label>
+                        <div class="d-flex justify-content-between">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="doctor-gender" id="both" checked>
+                                <label class="form-check-label mr-3 mb-1" for="both">خانم و آقا</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="doctor-gender" id="male">
+                                <label class="form-check-label mr-3 mb-1" for="male">آقا</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="doctor-gender" id="female">
+                                <label class="form-check-label mr-3 mb-1" for="female">خانم</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="available-doctors">
+                        <label class="form-check-label mr-3 mb-1" for="available-doctors">فقط پزشکان دارای نوبت باز</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Doctor List Section -->
+            <div class="col-md-9">
+                <div class="doctor-card text-right">
+                    <div class="d-flex">
+                        <img src="https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/11/YerJjqKYYRSLiTmNakzeLEwtEfOpLgi3OEW0ZLZC.jpg" alt="Doctor Image" class="ml-3">
+                        <div>
+                            <h5>دکتر سامیه کریمی</h5>
+                            <p class="mb-1">تخصص زنان، زایمان و نازایی / فلوشیپ آنکولوژی و سرطان زنان</p>
+                            <p class="text-muted mb-1" ><i class='bx bxs-star' style='margin-left: 5px; font-size: 1.5em' id="colorize"></i>٪۹۳.۲ پیشنهاد کاربران<i class='bx bxs-like' style='margin-left: 5px; margin-right: 5px; font-size: 1.5em;' id="colorize2"></i> (۴۸۶ نظر)</p>
+                            <p class="text-muted mb-1"><i class='bx bxs-location-plus' style='margin-left: 5px; font-size: 1.5em' id="colorize5"></i>بندرعباس، خیابان امام خمینی، نرسیده به پارک جنگلی، برج بهشت، طبقه ۲</p>
+                            <p class="text-muted">اولین نوبت آزاد مطب: چهارشنبه ۱۳ تیر</p>
+                            <button class="btn mt-2">نوبت بگیرید</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card text-right mt-3">
+                    <div class="d-flex">
+                        <img src="https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/12/UFJTyO1LX2aOninS2DgFqlKKJmOtW7x34LjTmsfi.jpg" alt="Doctor Image" class="ml-3">
+                        <div>
+                            <h5>دکتر لیلا زاهدی کشکولی</h5>
+                            <p class="mb-1">تخصص داخلی / فوق تخصص بیماری های روماتیسمی (روماتولوژی)</p>
+                            <p class="text-muted mb-1"><i class='bx bxs-star' style='margin-left: 5px; font-size: 1.5em' id="colorize3"></i>٪۹۹.۴ پیشنهاد کاربران<i class='bx bxs-like' style='margin-left: 5px; margin-right: 5px; font-size: 1.5em;' id="colorize4"></i> (۸۱۱ نظر)</p>
+                            <p class="text-muted mb-1"> </p><i class='bx bxs-location-plus' style='margin-left: 5px; font-size: 1.5em' id="colorize5"></i>شیراز، خیابان معالی آباد، بعد از خیابان اهواز، ساختمان اهواز، طبقه سوم، واحد سی و شش </p>
+                            <p class="text-muted">اولین نوبت آزاد مطب: شنبه ۹ تیر</p>
+                            <button class="btn mt-2">نوبت بگیرید</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer Section -->
+        <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="footer-logo">
+                                <img src="logo1.png" alt="لوگو">
+                                ویزیت یار
+                            </div>
+                            <p>با ما در ارتباط باشید...</p>
+                            <p>visityar@gmail.com</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="section-title">در کنار شما</div>
+                            <ul class="list-unstyled">
+                                <li>تخصص‌های پزشکی</li>
+                                <li>مجله سلامت</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="section-title">درباره دکتریتو</div>
+                            <ul class="list-unstyled">
+                                <li>مشاوره پزشکی آنلاین</li>
+                                <li>درباره ما</li>
+                                <li>سوالات متداول</li>
+                                <li>ثبت‌نام پزشکان</li>
+                                <li>قوانین و مقررات</li>
+                                <li>قوانین ثبت نظر</li>
+                                <li>تماس با ما</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <div class="icons">
+                                <img src="" alt="Icon 1">
+                                <img src="path/to/icon2.png" alt="Icon 2">
+                                <img src="path/to/icon3.png" alt="Icon 3">
+                                <img src="path/to/icon4.png" alt="Icon 4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>ویزیت یار، هنگام ویزیت گرفتن همراه شما هستیم...</p>
+                            <p>کلیه‌ی حقوق این وبسایت متعلق به امیرحسین زارعی و مهدیار مهدی پور است.</p>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+        </body>
+        </html>
+               
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="newFile.2.js"></script>
 </body>
 </html>
