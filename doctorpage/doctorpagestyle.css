@@ -1,4 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
 
+
+.navbar-nav {
+    margin: 2;
+}
+
+.navbar-brand img {
+    margin: 0 20px;
+    height: 40px;
+}
+
+.navbar {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.btn-user {
+    background-color: #2CDBB2;
+    color: #000;
+    border: none;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.btn-doctor {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid #2CDBB2;
+    border-radius: 10px;
+    text-align: left;
+    
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #2CDBB2;
+}
+
+.btn-confirm {
+    background-color: #2CDBB2;
+    color: rgb(0, 0, 0);
+}
+.input-group{
+    direction: ltr;
+}
+.modal-content {
+    text-align: center;
+    }
+    
+        
         body {
             font-family: 'Vazirmatn', sans-serif;
             background-color: #f3f3f3;
@@ -15,7 +69,13 @@
         }
         
         .inner-border2 {
-            background-color:#aef3e3;
+            background-color:#c8e8e1;
+            margin-top: 10px;
+            border-radius: 8px;
+            padding: 8px;
+        }
+        .inner-border3 {
+            background-color:#eaeaea;
             margin-top: 10px;
             border-radius: 8px;
             padding: 8px;
@@ -47,3 +107,48 @@
         .profile-details {
             flex-grow: 1;
         }
+
+        .footer {
+            background-color: #aaaaaa;
+            padding : 30px 0;
+            font-size: 14px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            margin-top: 55px;
+    
+            
+    
+        }
+        
+        .footer .footer-logo {
+            font-size: 50px;
+            font-weight: bold;
+            color: #2CDBB2;
+            margin-right: 10%;
+        }
+        
+        .footer .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .footer .divider {
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        
+        .footer .icons img {
+            max-width: 70px;
+            margin: 0 10px;
+        }
+        
+        .manfi{
+            margin-top: -15px;
+        }
+        
+        .padding{
+            padding-left: 45%;
+            padding-right: 45%;
+        }
+    
+    
