@@ -173,3 +173,47 @@ body {
   font-size: 0.875rem;
   color: #6c757d;
 }
+.specialty-card {
+  background-color: #2a9d8f;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-block: 20px;
+}
+
+.specialty-card-title {
+  font-size: 1.2rem;
+  font-weight:bolder;
+  color: aliceblue;
+}
+
+.specialty-card-text {
+  font-size: 0.9rem;
+  color: #eaeaea;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; 
+    height: 100%; 
+}
+
+.carousel-control-prev {
+    left: -15px; 
+}
+
+.carousel-control-next {
+    right: -15px; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 80%; 
+    padding: 2px; 
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(85, 255, 161, 0.8); 
+
+}
