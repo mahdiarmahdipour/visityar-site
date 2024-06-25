@@ -179,6 +179,7 @@ body {
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding-block: 20px;
+  max-height: max-content;
 }
 
 .specialty-card-title {
@@ -217,3 +218,38 @@ body {
     background-color: rgba(85, 255, 161, 0.8); 
 
 }
+.text-center{
+  margin: 10px;
+}
+.text-center1{
+  padding-right: 498px;
+  padding-top: 20px;
+  margin: auto;
+  align-items: center;
+}
+.city-card{
+  margin: 25px;
+  justify-content: right;
+  background-color: #4CAF93; 
+  border-radius: 20px; 
+  padding: 7px; 
+  color: #fff; 
+  width: 280px; 
+  text-align: right;
+  direction: rtl;
+}
+.city-card h4 {
+  font-size: 20px; 
+  font-weight: bold; 
+  margin-bottom: 10px; 
+}
+.city-card p {
+  font-size: 14px; 
+}
+.card2{
+  margin-left:84px;
+  margin-right: 2px;
+  margin-bottom: -40px;
+}
+
+  
