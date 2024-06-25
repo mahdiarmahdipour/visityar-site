@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Calendar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css">
+    <style>
+        /* Custom CSS for the profile */
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        .profile-container {
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .profile-container img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .profile-container h3 {
+            font-size: 1rem; /* نصف اندازه فعلی */
+            font-weight: 700; /* دو برابر ضخامت */
+        }
+        .btn-primary {
+            background-color: #2CDBB2;
+            border-color: #2CDBB2;
+        }
+        .btn-primary:hover {
+            background-color: #25b598;
+            border-color: #25b598;
+        }
+        .modal-content {
+            border: none;
+        }
+        .modal-header, .modal-footer {
+            border: none;
+        }
+        .divider {
+            border-left: 1px solid #ddd;
+            height: 100%;
+        }
+        #calendar {
+            transform: scale(2); /* دو برابر اندازه */
+            transform-origin: top left;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        .contact-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .contact-info i {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Doctor Appointment Calendar</h2>
+    <div class="text-center">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#appointmentModal">
+            نوبت بگیرید
+        </button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title mx-auto" id="appointmentModalLabel">انتخاب نوبت دکتر شیوا قیادی</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div id="calendar"></div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="divider"></div>
+                    </div>
+                    <div class="col-md-3 profile-container">
+                        <img src="https://via.placeholder.com/150" alt="Doctor Profile" class="img-thumbnail">
+                        <h3>دکتر شیوا قیادی</h3>
+                        <div class="contact-info">
+                            <i class='bx bx-map'></i>
+                            <p>تهران، بلوار کشاورز، نرسیده به میدان ولیعصر، ساختمان پزشکان</p>
+                        </div>
+                        <div class="contact-info">
+                            <i class='bx bx-phone'></i>
+                            <p>شماره تماس: 123456789</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                <button type="button" class="btn btn-primary">تأیید نوبت</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.fa.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#calendar').datepicker({
+            todayHighlight: true,
+            language: 'fa'
+        });
+    });
+</script>
+</body>
+</html>
