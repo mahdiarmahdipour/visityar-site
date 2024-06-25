@@ -54,6 +54,7 @@ body {
 }
 .input-group{
     direction: ltr;
+
 }
 .modal-content {
     text-align: center;
@@ -66,6 +67,8 @@ body {
     padding: 10px 20px;
     width: 80%;
     max-width: 60%;
+    margin-left: 10px;
+
   }
   .custom-button {
     background-color: #2a9d8f;
@@ -92,19 +95,81 @@ body {
     height: 100%;
     opacity: 0.1;
     z-index: -1;
-    background-image: url('icons-bg.png'); /* پس زمینه دلخواه */
     background-repeat: repeat;
   }
   .searchbar {
     background-color: #2CDBB2;
     color: white;
-    padding: 60px 0 20px;
+    padding: 90px 0 200px;
     position: relative;
-    top: -56px; /* Adjust this value according to your navbar height */
+    top: -56px;
     z-index: -1;}
 
 .container {
         max-width: 100%;
         color: #000;
+        
     
     }
+    #cityDropdown {
+      max-height: 200px;
+      overflow-y: auto;
+  }
+  .modal-header{
+    direction: rtl;
+  }
+.custom-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  position:relative;
+  width: 100%;
+  max-width: 300px; 
+  height: 100px; 
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  width:auto;
+  height:auto; 
+  object-fit: cover;
+  justify-content: center;
+  padding-right: 8px;
+}
+.container1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+  top: -160px;
+  z-index: 1;}
+
+  .card-body {
+    width: 75%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.card-subtext {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
