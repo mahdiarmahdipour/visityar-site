@@ -151,4 +151,58 @@
             padding-right: 45%;
         }
     
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        .profile-container {
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .profile-container img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .profile-container h3 {
+            font-size: 1rem; 
+            font-weight: 700;
+        }
+        .btn-primary {
+            background-color: #2CDBB2;
+            border-color: #2CDBB2;
+        }
+        .btn-primary:hover {
+            background-color: #25b598;
+            border-color: #25b598;
+        }
+        .modal-content {
+            border: none;
+        }
+        .modal-header, .modal-footer {
+            border: none;
+        }
+        .divider {
+            border-top: 0px;
+            border-left: 0.2px solid #ddd;
+            height: 100%;
+        }
+
+        .calendar-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+    
+        .datepicker {
+            direction: rtl;
+            transform: scale(1.5);
+            transform-origin: top right;
+
+
+        }
+
     

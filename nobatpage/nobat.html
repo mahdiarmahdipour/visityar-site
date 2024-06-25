@@ -14,7 +14,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="http://127.0.0.1:5500/homepage/index.html">
                 <img src="logo.png">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">نوبت دهی</a>
+                        <a class="nav-link" href="http://127.0.0.1:5500/nobatpage/nobat.html">نوبت دهی</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -176,8 +176,13 @@
                             <p class="text-muted mb-1" ><i class='bx bxs-star' style='margin-left: 5px; font-size: 1.5em' id="colorize"></i>٪۹۳.۲ پیشنهاد کاربران<i class='bx bxs-like' style='margin-left: 5px; margin-right: 5px; font-size: 1.5em;' id="colorize2"></i> (۴۸۶ نظر)</p>
                             <p class="text-muted mb-1"><i class='bx bxs-location-plus' style='margin-left: 5px; font-size: 1.5em' id="colorize5"></i>بندرعباس، خیابان امام خمینی، نرسیده به پارک جنگلی، برج بهشت، طبقه ۲</p>
                             <p class="text-muted">اولین نوبت آزاد مطب: چهارشنبه ۱۳ تیر</p>
-                            <button class="btn mt-2">نوبت بگیرید</button>
+                            <button class="btn mt-2" onclick="openNewPage()">نوبت بگیرید</button>
                         </div>
+                        <script>
+        function openNewPage() {
+            window.open('http://127.0.0.1:5500/doctorpage/doctorpage.html#', '_blank');
+        }
+    </script>
                     </div>
                 </div>
                 <div class="doctor-card text-right mt-3">
@@ -189,7 +194,12 @@
                             <p class="text-muted mb-1"><i class='bx bxs-star' style='margin-left: 5px; font-size: 1.5em' id="colorize3"></i>٪۹۹.۴ پیشنهاد کاربران<i class='bx bxs-like' style='margin-left: 5px; margin-right: 5px; font-size: 1.5em;' id="colorize4"></i> (۸۱۱ نظر)</p>
                             <p class="text-muted mb-1"> </p><i class='bx bxs-location-plus' style='margin-left: 5px; font-size: 1.5em' id="colorize5"></i>شیراز، خیابان معالی آباد، بعد از خیابان اهواز، ساختمان اهواز، طبقه سوم، واحد سی و شش </p>
                             <p class="text-muted">اولین نوبت آزاد مطب: شنبه ۹ تیر</p>
-                            <button class="btn mt-2">نوبت بگیرید</button>
+                            <button class="btn mt-2" onclick="openNewPage()">نوبت بگیرید</button>
+                            <script>
+                                function openNewPage() {
+                                    window.open('http://127.0.0.1:5500/doctorpage/doctorpage.html#', '_blank');
+                                }
+                            </script>
                         </div>
                     </div>
                 </div>
