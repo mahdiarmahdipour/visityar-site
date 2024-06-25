@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Appointment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <link href="doctorpagestyle.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mt-3" >
+                <div class="card">
+                    <div class="card-body">
+                        <div class="profile-section">
+                            <img src="https://statics.doctoreto.com/preset:sharp/resize:fill:180:180:0/gravity:sm/plain/s3://drto/avatar/doctor/2021/12/3E8C6MIYJvUYQeaO7dGL7FbAdrXj7JKPYNoVxV3Z.jpg" class="rounded-circle mb-3 profile-image" alt="Profile Picture" width="100">
+                            <div class="profile-details">
+                                <h5 class="card-title" style="font-size:x-large; font-weight: 700;">دکتر شیوا قبادی</h5>
+                                <p>تهران</p>
+                                <p>کد نظام پزشکی:50558</p>
+                                <p>تخصص کودکان و نوزادان</p>
+                            </div>
+                        </div>
+                        <div class="inner-border">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <i class='bx bxs-like'></i>
+                                    <p>2560</p>
+                                </div>
+                                <div class="col text-center">
+                                    <i class='bx bxs-dislike'></i>
+                                    <p>156</p>
+                                </div>
+                                <div class="col text-center">
+                                    <i class='bx bxs-star'></i>
+                                    <p>5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner-border2">
+                            <div class="row">
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-8  mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size:x-large; font-weight: 800; "><i class='bx bx-plus-medical ' style="color:#2CDBB2; font-size:xx-large; margin-left: 5px;"></i>نوبت دهی اینترنتی مطب دکتر شیوا قبادی</h5>
+                        <div class="clinic-info">
+                            <p style="font-size:larger; font-weight: 700;">مطب بلوار شهران</p>
+                            <p style="font-size: larger;"><i class='bx bxs-map' style="color:#469C88; font-size:xx-large;"></i>تهران، بلوار شهران شمالی، بالاتر از فلکه دوم شهران، بعد از مسجد امام علی، ساختمان داروخانه شبانه روزی دکتر کریمان، واحد اول</p>
+                            <p style="font-size: larger;"><i class='bx bxs-calendar' style="color:#469C88; font-size:xx-large;"></i> اولین نوبت آزاد: سه‌شنبه 1 تیر 1402</p>
+                        </div>
+                        <div class="divider"></div>
+                        <a href="#" class="btn btn-custom">نوبت بگیرید</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">مطب دکتر شیوا قبادی</h5>
+                        <p><i class='bx bxs-map' style="color:#469C88; font-size:xx-large;"></i> آدرس:...</p>
+                        <p><i class='bx bxs-phone' style="color:#469C88; font-size:xx-large;"></i> شماره تماس: 02112345678</p>
+                        <button class="btn btn-custom" onclick="toggleReviewSection()">ثبت نظر</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-3 review-section" id="reviewSection">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">نظر خود را ثبت کنید</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label for="review" class="form-label">نظر:</label>
+                                <textarea class="form-control" id="review" rows="3"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="submitReview()">ارسال</button>
+                            <button type="button" class="btn btn-secondary" onclick="toggleReviewSection()">بستن</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">نظرات کاربران</h5>
+                        <div class="mb-2">
+                            <p><i class='bx bxs-star star-icon'></i> 4.9</p>
+                            <p>زمان انتظار: 15-45 دقیقه</p>
+                            <p>پاسخگویی کاربران: 97%</p>
+                        </div>
+                        <div>
+                            <p><i class='bx bxs-star star-icon'></i> بسیار عالی، تشخیص درست و کارامد...</p>
+                            <p><i class='bx bxs-star star-icon'></i> بسیار خوش برخورد...</p>
+                            <p><i class='bx bxs-star star-icon'></i> خیلی خوب...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleReviewSection() {
+            var section = document.getElementById('reviewSection');
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+
+        function submitReview() {
+            // Logic for submitting the review
+            alert('نظر شما ثبت شد.');
+            toggleReviewSection();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

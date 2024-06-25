@@ -1,0 +1,49 @@
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f3f3f3;
+        }
+        .review-section { display: none; }
+        .star-icon {
+            color: gold;
+        }
+        .inner-border {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+        
+        .inner-border2 {
+            background-color:#aef3e3;
+            margin-top: 10px;
+            border-radius: 8px;
+            padding: 8px;
+        }
+        .clinic-info {
+            border: 1px solid #2CDBB2;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .divider {
+            border-top: 1px solid #ccc;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .btn-custom {
+            background-color: #2CDBB2;
+            color: rgb(0, 0, 0);
+        }
+        .btn-custom:hover {
+            background-color: #28a28b;
+        }
+        .profile-section {
+            display: flex;
+            align-items: center;
+        }
+        .profile-image {
+            margin-left: 20px;
+        }
+        .profile-details {
+            flex-grow: 1;
+        }
