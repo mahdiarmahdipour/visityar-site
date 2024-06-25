@@ -183,6 +183,13 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding-block: 20px;
   max-height: max-content;
+  transition: transform 0.2s;
+
+}
+.specialty-card:hover{
+  transform: scale(1.05);
+
+
 }
 
 .specialty-card-title {
@@ -240,6 +247,10 @@ body {
   width: 280px; 
   text-align: right;
   direction: rtl;
+}
+.city-card:hover{
+  transform: scale(1.05);
+
 }
 .city-card h4 {
   font-size: 20px; 
