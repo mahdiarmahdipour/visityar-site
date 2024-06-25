@@ -20,6 +20,7 @@ body {
 .navbar {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    z-index: 5;
 }
 
 .btn-user {
@@ -41,6 +42,7 @@ body {
     border: none;
     display: flex;
     justify-content: space-around;
+    text-align: right;
 }
 
 .form-control:focus {
@@ -97,20 +99,21 @@ body {
     z-index: -1;
     background-repeat: repeat;
   }
-  .searchbar {
-    background-color: #2CDBB2;
-    color: white;
-    padding: 90px 0 200px;
-    position: relative;
-    top: -56px;
-    z-index: -1;}
-
 .container {
         max-width: 100%;
         color: #000;
         
-    
+
     }
+
+.baner1{
+  background-color: #2CDBB2;
+  color: white;
+  padding: 90px 0 200px;
+  position: relative;
+  top: -56px;
+  z-index: 0;
+}
     #cityDropdown {
       max-height: 200px;
       overflow-y: auto;
@@ -249,7 +252,41 @@ body {
 .card2{
   margin-left:84px;
   margin-right: 2px;
-  margin-bottom: -40px;
+  margin-bottom: -20px;
+}
+/*  */
+.top-doctors-container {
+  background-color: #4CAF93; 
+  border-radius: 50px; 
+  padding: 90px 5px; 
+  color: #000000; 
+  text-align: center; 
+  width: 80%;
+  margin: 50px auto; 
+}
+
+.top-doctors-container h2 {
+  font-size: 2rem; 
+  font-weight: bold; 
+  margin-bottom: 20px; 
+}
+
+.top-doctors-container p {
+  font-size: 1.2rem; 
+  margin-bottom: 80px;
+}
+
+.btn-primary {
+  background-color: #405C55; 
+  border: none; 
+  padding: 10px 40px; 
+  font-size: 1.2rem; 
+  border-radius: 10px; 
+  color: #fff; 
+}
+
+.btn-primary:hover {
+  background-color: #00b35f; 
 }
 
   
